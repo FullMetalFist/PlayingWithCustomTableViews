@@ -15,9 +15,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "EmbeddedButtonCell", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "EmbeddedButtonCell")
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -16,6 +16,8 @@
 		7C094F0A1D0335F5000D56E2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C094F091D0335F5000D56E2 /* DataProvider.swift */; };
 		7C094F0E1D033A7F000D56E2 /* HeaderWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C094F0D1D033A7F000D56E2 /* HeaderWithButtonView.swift */; };
 		7C094F101D033A94000D56E2 /* HeaderWithButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C094F0F1D033A94000D56E2 /* HeaderWithButtonView.xib */; };
+		7C9C4F671D15ABFA00FC7600 /* EmbeddedButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9C4F651D15ABFA00FC7600 /* EmbeddedButtonCell.swift */; };
+		7C9C4F681D15ABFA00FC7600 /* EmbeddedButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C9C4F661D15ABFA00FC7600 /* EmbeddedButtonCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		7C094F091D0335F5000D56E2 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProvider.swift; path = Controller/DataProvider.swift; sourceTree = "<group>"; };
 		7C094F0D1D033A7F000D56E2 /* HeaderWithButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderWithButtonView.swift; path = View/HeaderWithButtonView.swift; sourceTree = "<group>"; };
 		7C094F0F1D033A94000D56E2 /* HeaderWithButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderWithButtonView.xib; path = View/HeaderWithButtonView.xib; sourceTree = "<group>"; };
+		7C9C4F651D15ABFA00FC7600 /* EmbeddedButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmbeddedButtonCell.swift; path = View/EmbeddedButtonCell.swift; sourceTree = "<group>"; };
+		7C9C4F661D15ABFA00FC7600 /* EmbeddedButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EmbeddedButtonCell.xib; path = View/EmbeddedButtonCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 			children = (
 				7C094F0D1D033A7F000D56E2 /* HeaderWithButtonView.swift */,
 				7C094F0F1D033A94000D56E2 /* HeaderWithButtonView.xib */,
+				7C9C4F651D15ABFA00FC7600 /* EmbeddedButtonCell.swift */,
+				7C9C4F661D15ABFA00FC7600 /* EmbeddedButtonCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				7C094F101D033A94000D56E2 /* HeaderWithButtonView.xib in Resources */,
 				7C094EF11D03344E000D56E2 /* Assets.xcassets in Resources */,
 				7C094EEF1D03344E000D56E2 /* Main.storyboard in Resources */,
+				7C9C4F681D15ABFA00FC7600 /* EmbeddedButtonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +233,7 @@
 				7C094F0A1D0335F5000D56E2 /* DataProvider.swift in Sources */,
 				7C094F0E1D033A7F000D56E2 /* HeaderWithButtonView.swift in Sources */,
 				7C094EEC1D03344E000D56E2 /* ViewController.swift in Sources */,
+				7C9C4F671D15ABFA00FC7600 /* EmbeddedButtonCell.swift in Sources */,
 				7C094EEA1D03344E000D56E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +424,7 @@
 				7C094F051D03344F000D56E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C094F061D03344F000D56E2 /* Build configuration list for PBXNativeTarget "PlayingWithCustomTableViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +433,7 @@
 				7C094F081D03344F000D56E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

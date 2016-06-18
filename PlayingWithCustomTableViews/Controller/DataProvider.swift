@@ -14,7 +14,12 @@ private enum Section: Int {
     case Bottom
 }
 
-class DataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+private struct CellIdentifier {
+    let cell = "cell"
+    let embed = "EmbeddedButtonCell"
+}
+
+class DataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, EmbeddedDelegate {
     
     var itemKind: NSObject?
     var value: Int?
@@ -31,9 +36,17 @@ class DataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        cell?.textLabel?.text = "\(indexPath.row)"
-        return cell!
+        guard let theSection = Section(rawValue: indexPath.section) else { fatalError() }
+        
+        switch theSection {
+        case .Top, .Bottom:
+            let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier().cell)
+            return cell!
+        case .Middle:
+            let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier().embed) as? EmbeddedButtonCell
+            cell?.delegate = self
+            return cell!
+        }
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -54,5 +67,9 @@ class DataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func buttonHeaderAction() {
         print("button in Header tapped")
+    }
+    
+    func cellDidTapButton(sender: EmbeddedButtonCell) {
+        print("button tapped")
     }
 }
